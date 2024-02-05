@@ -48,15 +48,15 @@ class Crawl(QObject):
                 for url in matches:
                     print(url)
                     if "quark" in url:
-                        icon_path = "D:/Bf4_Movie/kuake.png"
+                        icon_path = "D:/Bf4_Movie/image/kuake.png"
                     elif "aliyundrive" in url:
-                        icon_path = "D:/Bf4_Movie/ali.jpg"
+                        icon_path = "D:/Bf4_Movie/image/ali.jpg"
                     elif "baidu" in url:
-                        icon_path = "D:/Bf4_Movie/baidu.png"
+                        icon_path = "D:/Bf4_Movie/image/baidu.png"
                     else:
-                        icon_path = "D:/Bf4_Movie/wangpan.png"
+                        icon_path = "D:/Bf4_Movie/image/wangpan.png"
 
-                    hyperlink += f'<br> <a href="{url}" target="_blank">{url}</a>'
+                    hyperlink += f'<br><div><img src="{icon_path}" alt="Icon"> <a href="{url}" target="_blank">{url}</a></div> '
 
                 print(hyperlink)
                 self.link_signal.emit(text + hyperlink)

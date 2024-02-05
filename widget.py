@@ -30,7 +30,7 @@ class Widget(QWidget):
         self.load_ui()
         # 设置背景图片
         palette = self.palette()
-        palette.setBrush(QPalette.Window, QBrush(QPixmap("D:/Bf4_Movie/bk.jpg")))
+        palette.setBrush(QPalette.Window, QBrush(QPixmap("D:/Bf4_Movie/image/bk.jpg")))
         self.setPalette(palette)
 
     def load_ui(self):
