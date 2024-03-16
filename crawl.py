@@ -6,24 +6,24 @@ import aiohttp
 import asyncio
 import requests
 from PySide2.QtCore import Signal, QObject
-from selenium import webdriver
-from msedge.selenium_tools import EdgeOptions
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+# from selenium import webdriver
+# from msedge.selenium_tools import EdgeOptions
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
+# from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
-edge_driver_path = 'D:/EdgeDriver/msedgedriver.exe'
+# edge_driver_path = 'D:/EdgeDriver/msedgedriver.exe'
 
 # 设置 Edge 选项
-edge_options = EdgeOptions()
-edge_options.use_chromium = True
+# edge_options = EdgeOptions()
+# edge_options.use_chromium = True
 
 # 更新 DesiredCapabilities.EDGE 的配置到 edge_options
-edge_options.capabilities.update(DesiredCapabilities.EDGE)
+# edge_options.capabilities.update(DesiredCapabilities.EDGE)
 
 # 设置 pageLoadStrategy 为 "none"
-edge_options.set_capability("pageLoadStrategy", "none")
+# edge_options.set_capability("pageLoadStrategy", "none")
 
 # selenium设置最大等待时间为 10 秒
 max_wait_time = 10
@@ -49,7 +49,7 @@ headers = {
     'Cookie': 'fuid=6d17cdac117a35de2226a87a46a9bb30; Hm_lvt_5d3e7a242a65066db573612ae03026fe=1707814582,1708136731; _gid=GA1.2.1763287700.1708136732; _ga=GA1.2.1260259804.1707814582; Hm_lpvt_5d3e7a242a65066db573612ae03026fe=1708160827; _ga_GLWK4EWNVY=GS1.1.1708157603.3.1.1708161743.60.0.0',
 }
 
-edge_options.add_argument(f'--user-agent={selected_user_agent}')
+# edge_options.add_argument(f'--user-agent={selected_user_agent}')
 
 
 class Crawl(QObject):
